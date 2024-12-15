@@ -46,7 +46,7 @@ int main()
 {
     Solution solution;
     vector<int> coins = {1, 2, 5};
-    cout << solution.change(8, coins) << endl;
+    cout << solution.change(9, coins) << endl;
 }
 
 
