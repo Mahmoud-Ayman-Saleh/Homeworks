@@ -48,4 +48,3 @@ int main()
     Solution s;
     cout << s.cutting_rod() << endl;
 }
-// kjbvjhfy
