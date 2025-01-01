@@ -28,7 +28,7 @@ private:
         return ans;
     }
 public:
-    int maxSubArray(vector<int>& nums)
+    int maxSubArray_recursive(vector<int>& nums)
     {
         arr = nums;
         memset(memory, -1, sizeof(memory));
@@ -39,4 +39,27 @@ public:
         }
         return ans;
     }
+
+    int maxSubArray_non_recursive(vector<int>& nums)
+    {
+        int cur_sum = nums[0];
+        int ans = nums[0];
+        for (int i = 1; i < nums.size(); i++)
+        {
+            cur_sum = max(nums[i], cur_sum + nums[i]);
+            ans = max(ans, cur_sum);
+        }
+
+        return ans;
+    }
 };
+
+int main()
+{
+    int n; cin >> n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
+    Solution s;
+    cout << s.maxSubArray_recursive(v) << endl;
+    cout << s.maxSubArray_non_recursive(v) << endl;
+}
