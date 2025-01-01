@@ -33,6 +33,6 @@ void tower_of_hanoi2(int n, char from, char aux, char to)
 
 int main()
 {
-    int n = 2;
+    int n; cin >> n;
     tower_of_hanoi2(n, 'A', 'B', 'C');
 }
